@@ -1,0 +1,10 @@
+[submodule "deps/stats"]
+	path = deps/stats
+	url = git@github.com:kthohr/stats.git
+[submodule "deps/gcem"]
+	path = deps/gcem
+	url = git@github.com:kthohr/gcem.git
+[submodule "deps/pybind11"]
+	path = deps/pybind11
+	url = git@github.com:pybind/pybind11.git
+	branch = stable
