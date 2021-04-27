@@ -8,6 +8,11 @@ namespace py = pybind11;
 
 void Bernoulli(py::module& m);
 void Beta(py::module& m);
+void Cauchy(py::module& m);
+void Exponential(py::module& m);
+void F(py::module& m);
 void Normal(py::module& m);
+void Poisson(py::module& m);
+void StudentT(py::module& m);
 void Uniform(py::module& m);
 void Weibull(py::module& m);

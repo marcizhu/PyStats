@@ -30,7 +30,18 @@ pybind11_add_module(pystats
 	src/Utils.cpp
 	src/Bernoulli.cpp
 	src/Beta.cpp
+#	src/Binomial.cpp
+	src/Cauchy.cpp
+#	src/ChiSquared.cpp
+	src/Exponential.cpp
+	src/F.cpp
+#	src/Gamma.cpp
+#	src/InvGamma.cpp
+#	src/Laplace.cpp
+#	src/Logistic.cpp
 	src/Normal.cpp
+	src/Poisson.cpp
+	src/StudentT.cpp
 	src/Uniform.cpp
 	src/Weibull.cpp)
 
