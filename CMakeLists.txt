@@ -32,13 +32,14 @@ pybind11_add_module(pystats
 	src/Beta.cpp
 #	src/Binomial.cpp
 	src/Cauchy.cpp
-#	src/ChiSquared.cpp
+	src/ChiSquared.cpp
 	src/Exponential.cpp
 	src/F.cpp
-#	src/Gamma.cpp
-#	src/InvGamma.cpp
-#	src/Laplace.cpp
-#	src/Logistic.cpp
+	src/Gamma.cpp
+	src/InvGamma.cpp
+	src/Laplace.cpp
+	src/Log-Normal.cpp
+	src/Logistic.cpp
 	src/Normal.cpp
 	src/Poisson.cpp
 	src/StudentT.cpp
