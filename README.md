@@ -1,6 +1,6 @@
 # PyStats
 
-Pystats is a Python 3 library of statistical analysis and distribution functions with simple **R**-like syntax, scalar/list input/output with OpenMP parallelization.
+PyStats is a Python 3 library of statistical analysis and distribution functions with simple **R**-like syntax, scalar/list input/output with OpenMP parallelization.
 
 ### Contents
 - [Distributions](#distributions)
@@ -69,7 +69,7 @@ pystats.pgamma(<value>, <shape parameter>, <scale parameter>)
 pystats.qbeta(<value>, <a parameter>, <b parameter>)
 ```
 
-- Random sampling: `stats.r*`. For example, to generate a single draw from the Logistic distribution:
+- Random sampling: `pystats.r*`. For example, to generate a single draw from the Logistic distribution:
 ```python3
 pystats.rlogis(<location parameter>, <scale parameter>)
 ```
@@ -77,15 +77,15 @@ pystats.rlogis(<location parameter>, <scale parameter>)
 The library also supports lists as input/output:
 - The pdf, cdf and quantile functions can take list arguments. For example:
 ```python3
-norm_pdf_vals = pystats.dnorm([for x in range(-1, 1, 0.1)], 1.0, 2.0)
+norm_pdf_vals = pystats.dnorm([x / 10 for x in range(-10, 10, 1)], 1.0, 2.0)
 ```
 
-- The randomization functions (r*) can output lists of arbitrary size. For example, the following code will generate a 100-item list of iid draws from a Gamma(3,2) distribution:
+- The randomization functions (`r*`) can output lists of arbitrary size. For example, the following code will generate a 100-item list of iid draws from a Gamma(3,2) distribution:
 ```python3
 gamma_rvs = pystats.rgamma(100, 3.0, 2.0)
 ```
 
-Additionally, most parameters have defaults to sensible values and named parameters are also supported. For example, to generate a single draw from a Normal(0, 2) the following can be used:
+Additionally, most parameters have defaults to most common values and named parameters are also supported. For example, to generate a single draw from a Normal(0, 2) the following can be used:
 ```python3
 norm_draw = pystats.rnorm(sd=2.0)
 ```
@@ -97,19 +97,19 @@ More examples with code:
 dval_1 = pystats.dnorm(1.0, 0.0, 1.0)
  
 # Evaluate the normal PDF at x = 1, mu = 0, sigma = 1, and return the log value
-dval_2 = pystats.dnorm(1.0, 0.0, 1.0, true)
+dval_2 = pystats.dnorm(1.0, 0.0, 1.0, True)
  
 # Same as above, but using default values and named parameters
-dval_3 = pystats.dnorm(1.0, log=true)
+dval_3 = pystats.dnorm(1.0, log=True)
 
 # Evaluate the normal CDF at x = 1, mu = 0, sigma = 1
 pval = pystats.pnorm(1.0, 0.0, 1.0)
  
-# Evaluate the Laplacian quantile at p = 0.1, mu = 0, sigma = 1
+# Evaluate the Laplacian quantile at q = 0.1, mu = 0, sigma = 1
 qval = pystats.qlaplace(0.1, 0.0, 1.0)
 
-# Draw from a t-distribution dof = 30
-rval = pystats.rt(30)
+# Draw from a t-distribution with dof = 30
+rval = pystats.rt(dof=30)
 
 # List output
 beta_rvs = pystats.rbeta(100, 3.0, 2.0)
@@ -123,6 +123,6 @@ For more information on default values, parameter names and other examples, chec
 This library uses [kthohr/stats](https://github.com/kthohr/stats) for the statistical distribution functions, [kthohr/gcem](https://github.com/kthohr/gcem) (a dependency of the previous library) and [pybind/pybind11](https://github.com/pybind/pybind11) to generate the binding code.
 
 ## License
-Copyright (c) Marc Izquierdo 2021
+Copyright (c) Marc Izquierdo 2021  
 This library is licensed under the [MIT License](https://choosealicense.com/licenses/mit/). See
 [LICENSE](https://github.com/marcizhu/pystats/blob/master/LICENSE) for more details.
