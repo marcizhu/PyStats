@@ -30,7 +30,7 @@ pybind11_add_module(pystats
 	src/Utils.cpp
 	src/Bernoulli.cpp
 	src/Beta.cpp
-#	src/Binomial.cpp
+	src/Binomial.cpp
 	src/Cauchy.cpp
 	src/ChiSquared.cpp
 	src/Exponential.cpp

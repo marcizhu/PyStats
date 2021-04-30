@@ -17,7 +17,7 @@ PYBIND11_MODULE(pystats, m)
 
 	REGISTER_DISTRIBUTION(Bernoulli);
 	REGISTER_DISTRIBUTION(Beta);
-//	REGISTER_DISTRIBUTION(Binomial);
+	REGISTER_DISTRIBUTION(Binomial);
 	REGISTER_DISTRIBUTION(Cauchy);
 	REGISTER_DISTRIBUTION(ChiSquared);
 	REGISTER_DISTRIBUTION(Exponential);
@@ -32,11 +32,4 @@ PYBIND11_MODULE(pystats, m)
 	REGISTER_DISTRIBUTION(StudentT);
 	REGISTER_DISTRIBUTION(Uniform);
 	REGISTER_DISTRIBUTION(Weibull);
-
-/*
-	m.def("dbinom", static_cast<double(*)(int64_t, int64_t, double, bool)>(&stats::dbinom), D_DOC("Binomial"), py::arg("x"), py::arg("n_trials"), py::arg("prob"), py::arg("log") = false);
-	m.def("pbinom", static_cast<double(*)(int64_t, int64_t, double, bool)>(&stats::pbinom), P_DOC("Binomial"), py::arg("x"), py::arg("n_trials"), py::arg("prob"), py::arg("log") = false);
-	m.def("qbinom", static_cast<double(*)(double , int64_t, double      )>(&stats::qbinom), Q_DOC("Binomial"), py::arg("p"), py::arg("n_trials"), py::arg("prob"));
-	m.def("rbinom", [](size_t  n, int64_t n_trials, double prob) { return stats::rbinom<vector>(1, n, n_trials, prob); }, R_DOC("Binomial"), py::arg("n") = 1, py::arg("n_trials"), py::arg("prob"));
-*/
 }

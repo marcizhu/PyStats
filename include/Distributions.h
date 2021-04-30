@@ -8,7 +8,7 @@ namespace py = pybind11;
 
 void Bernoulli(py::module& m);
 void Beta(py::module& m);
-//void Binomial(py::module& m);
+void Binomial(py::module& m);
 void Cauchy(py::module& m);
 void ChiSquared(py::module& m);
 void Exponential(py::module& m);
