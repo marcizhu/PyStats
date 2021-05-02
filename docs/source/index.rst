@@ -7,6 +7,29 @@
 Introduction
 ============
 
+PyStats is a Python 3 library of statistical analysis and distribution functions with simple **R**-like syntax, scalar/list
+input/output with OpenMP parallelization.
+
+Author: Marc Izquierdo
+
+License: MIT License
+
+----
+
+Installation
+------------
+
+You can use pip to install this library:
+
+.. code:: none
+
+    pip install pystats
+
+After that, you can just ``import`` pystats (or do ``from pystats import *`` if you don't want to type ``pystats.`` before all
+functions) and you're ready to go.
+
+----
+
 Contents
 --------
 
@@ -14,6 +37,8 @@ Contents
    :maxdepth: 2
    :caption: Guide
 
+   syntax_notes
+   examples
    pystats
 
 .. toctree::
@@ -21,11 +46,3 @@ Contents
    :maxdepth: 2
 
    api/index
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
