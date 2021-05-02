@@ -31,6 +31,7 @@ Functions to compute the cdf, pdf, quantile, as well as random sampling methods,
 - Uniform
 - Weibull
 
+
 ## Installation
 You can use pip to install this library:
 
@@ -40,16 +41,12 @@ pip3 install pystats
 
 After that, you can just `import pystats` (or do `from pystats import *` if you don't want to type `pystats.` before all functions) and you're ready to go.
 
+
 ## Documentation
-
-Coming soon
-
-<!--
 Full documentation is available online:
-(link)
+[![Documentation Status](https://readthedocs.org/projects/pystats/badge/?version=latest)](https://pystats.readthedocs.io/en/latest/?badge=latest)
 
-A PDF version of the documentation is available [here](link)
--->
+A PDF version of the documentation is available [here](https://buildmedia.readthedocs.org/media/pdf/pystats/latest/pystats.pdf)
 
 ## Syntax and Examples
 Functions are called using an **R**-like syntax. Some general rules:
