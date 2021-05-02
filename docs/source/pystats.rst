@@ -1,2 +1,5 @@
+Reference
+=========
+
 .. automodule:: pystats
    :members:

@@ -1,16 +1,26 @@
-.. PyStats documentation master file, created by
-   sphinx-quickstart on Sat May  1 21:11:15 2021.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+.. Copyright (c) 2021 Marc Izquierdo
 
-Welcome to PyStats's documentation!
-===================================
+   Distributed under the terms of the MIT License.
+
+   The full license is in the file LICENSE, distributed with this software.
+
+Introduction
+============
+
+Contents
+--------
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Guide
 
    pystats
+
+.. toctree::
+   :caption: API
+   :maxdepth: 2
+
+   api/index
 
 
 Indices and tables
