@@ -9,7 +9,7 @@ namespace py = pybind11;
 void Poisson(py::module& m)
 {
 	// Scalar input
-	m.def("dpois", static_cast<double(*)(int64_t, double, bool)>(&stats::dpois),
+	m.def("dpois", static_cast<double(*)(stats::llint_t, double, bool)>(&stats::dpois),
 		py::arg("x"), py::arg("rate"), py::arg("log") = false,
 		"Density function of the Poisson distribution.\n\n"
 
@@ -21,7 +21,7 @@ void Poisson(py::module& m)
 		"Returns:\n"
 		"    The density function evaluated at `x`.");
 
-	m.def("ppois", static_cast<double(*)(int64_t, double, bool)>(&stats::ppois),
+	m.def("ppois", static_cast<double(*)(stats::llint_t, double, bool)>(&stats::ppois),
 		py::arg("p"), py::arg("rate"), py::arg("log") = false,
 		"Distribution function of the Poisson distribution.\n\n"
 

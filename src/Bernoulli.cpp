@@ -9,7 +9,7 @@ namespace py = pybind11;
 void Bernoulli(py::module& m)
 {
 	// Scalar input
-	m.def("dbern", static_cast<double(*)(int64_t, double, bool)>(&stats::dbern),
+	m.def("dbern", static_cast<double(*)(stats::llint_t, double, bool)>(&stats::dbern),
 		py::arg("x"), py::arg("prob"), py::arg("log") = false,
 		"Density function of the Bernoulli distribution.\n\n"
 
@@ -21,7 +21,7 @@ void Bernoulli(py::module& m)
 		"Returns:\n"
 		"    The density function evaluated at `x`.");
 
-	m.def("pbern", static_cast<double(*)(int64_t, double, bool)>(&stats::pbern),
+	m.def("pbern", static_cast<double(*)(stats::llint_t, double, bool)>(&stats::pbern),
 		py::arg("p"), py::arg("prob"), py::arg("log") = false,
 		"Distribution function of the Bernoulli distribution.\n\n"
 
