@@ -25,7 +25,7 @@ You can use pip to install this library:
 
     pip install pystats
 
-After that, you can just ``import`` pystats (or do ``from pystats import *`` if you don't want to type ``pystats.`` before all
+After that, you can just ``import pystats`` (or do ``from pystats import *`` if you don't want to type ``pystats.`` before all
 functions) and you're ready to go.
 
 ----
@@ -39,7 +39,6 @@ Contents
 
    syntax_notes
    examples
-   pystats
 
 .. toctree::
    :caption: API

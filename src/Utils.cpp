@@ -1,26 +1,38 @@
 #include <vector>
 #include <cmath>
 
-double mean(const std::vector<double>& data, bool na_rm)
+inline double accu(const std::vector<double>& X)
 {
-	double res = 0.0;
-
-	for(double x : data)
-	{
-		if(!std::isnan(x) || !na_rm)
-			res += x;
-	}
-
-	return res / (double)data.size();
+	double sum_val = double(0);
+	for (auto x : X)
+		sum_val += x;
+	return sum_val;
 }
 
-double sd(const std::vector<double>& data, bool na_rm)
+inline double sqaccu(const std::vector<double>& X)
 {
-	const double mu = mean(data, na_rm);
-	double var = 0.0;
+	double sum_val = double(0);
+	for (auto& x : X)
+		sum_val += x*x;
+	return sum_val;
+}
 
-	for(double x : data)
-		var += (x - mu) * (x - mu);
+double mean(const std::vector<double>& X)
+{
+	return accu(X) / static_cast<double>(X.size());
+}
 
-	return std::sqrt(var / (double)data.size());
+double sd(const std::vector<double>& X)
+{
+	double mean_val = mean(X);
+	double sq_val = sqaccu(X) / static_cast<double>(X.size() - 1);
+	return std::sqrt(sq_val - (static_cast<double>(X.size()) / static_cast<double>(X.size() - 1)) * mean_val * mean_val);
+
+}
+
+double var(const std::vector<double>& X)
+{
+	double mean_val = mean(X);
+	double sq_val = sqaccu(X) / static_cast<double>(X.size() - 1);
+	return sq_val - (static_cast<double>(X.size()) / static_cast<double>(X.size() - 1)) * mean_val * mean_val;
 }

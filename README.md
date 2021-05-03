@@ -44,9 +44,11 @@ After that, you can just `import pystats` (or do `from pystats import *` if you 
 
 ## Documentation
 Full documentation is available online:
+
 [![Documentation Status](https://readthedocs.org/projects/pystats/badge/?version=latest)](https://pystats.readthedocs.io/en/latest/?badge=latest)
 
-A PDF version of the documentation is available [here](https://buildmedia.readthedocs.org/media/pdf/pystats/latest/pystats.pdf)
+A PDF version of the documentation is available [here](https://buildmedia.readthedocs.org/media/pdf/pystats/latest/pystats.pdf).
+
 
 ## Syntax and Examples
 Functions are called using an **R**-like syntax. Some general rules:
@@ -87,6 +89,7 @@ Additionally, most parameters have defaults to most common values and named para
 norm_draw = pystats.rnorm(sd=2.0)
 ```
 
+
 ### Examples
 More examples with code:
 ```python3
@@ -116,8 +119,10 @@ beta_cdf_vals = pystats.pbeta(beta_rvs, 3.0, 2.0)
 
 For more information on default values, parameter names and other examples, check the [documentation](#documentation).
 
+
 ## Credits
 This library uses [kthohr/stats](https://github.com/kthohr/stats) for the statistical distribution functions, [kthohr/gcem](https://github.com/kthohr/gcem) (a dependency of the previous library) and [pybind/pybind11](https://github.com/pybind/pybind11) to generate the binding code.
+
 
 ## License
 Copyright (c) Marc Izquierdo 2021  

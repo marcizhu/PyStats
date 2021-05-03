@@ -10,10 +10,11 @@ PYBIND11_MODULE(pystats, m)
 {
 	m.doc() = "R-like statistical functions and distributions for Python 3";
 
-	m.def("mean", &mean, py::arg("x"), py::arg("nan_rm") = false);
-	m.def("sd",   &sd,   py::arg("x"), py::arg("nan_rm") = false);
-//	m.def("var",  &var,  py::arg("x"), py::arg("nan_rm") = false);
-//	m.def("IQR",  &IQR,  py::arg("x"), py::arg("nan_rm") = false, py::arg("type") = 7); //https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/IQR
+	m.attr("__version__") = "0.0.1";
+
+	m.def("mean", &mean, py::arg("x"), "Compute the mean of the given data");
+	m.def("sd",   &sd,   py::arg("x"), "Compute the standard deviation of the given data");
+	m.def("var",  &var,  py::arg("x"), "Compute the variance of the given data");
 
 	REGISTER_DISTRIBUTION(Bernoulli);
 	REGISTER_DISTRIBUTION(Beta);
