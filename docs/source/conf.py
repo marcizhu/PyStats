@@ -71,3 +71,22 @@ html_theme = 'default'
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
+
+from collections import defaultdict
+
+def process_overloaded_items(app, what, name, obj, options, lines):
+	if not "Overloaded function" in lines[1]:
+		return
+
+	index = app.doc_dict[name]
+	first = next((lines.index(l) for l in lines if l.startswith(str(index + 0) + ".")))
+	last  = next((lines.index(l) for l in lines if l.startswith(str(index + 1) + ".")), len(lines))
+
+	del lines[0:first+1]
+	del lines[last-first-1:]
+
+	app.doc_dict[name] += 1
+
+def setup(app):
+	app.doc_dict = defaultdict(lambda: 1)
+	app.connect('autodoc-process-docstring', process_overloaded_items)

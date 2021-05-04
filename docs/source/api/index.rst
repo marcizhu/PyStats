@@ -32,7 +32,7 @@ Distributions
 .. toctree::
    :maxdepth: 2
 
-   bernoulli
+   Bernoulli
 
 +----------------------------------------+--------------------------------------------------------------+
 | :ref:`dbern <dbern-func-ref1>`         | density function of the Bernoulli distribution               |

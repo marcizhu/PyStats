@@ -41,8 +41,7 @@ The library also supports lists as input/output:
 
     norm_pdf_vals = pystats.dnorm([x / 10 for x in range(-10, 10, 1)], 1.0, 2.0)
 
-- The randomization functions (``r*``) can output random lists of arbitrary size. For example, the following
-code will generate a 100-item list of iid draws from a Gamma(3,2) distribution:
+- The randomization functions (``r*``) can output random lists of arbitrary size. For example, the following code will generate a 100-item list of iid draws from a Gamma(3,2) distribution:
 
 .. code:: python
 

@@ -26,7 +26,7 @@ void Bernoulli(py::module& m)
 		"Distribution function of the Bernoulli distribution.\n\n"
 
 		"Args:\n"
-		"    p (float): A value equal to 0 or 1.\n"
+		"    p (int): A value equal to 0 or 1.\n"
 		"    prob (float): The probability parameter, a real-valued input.\n"
 		"    log (bool): Return the log-density or the true form.\n\n"
 
@@ -78,12 +78,12 @@ void Bernoulli(py::module& m)
 		"Returns:\n"
 		"    A vector of density values corresponding to the elements of `x`.");
 
-	m.def("pbern", static_cast<std::vector<double>(*)(const std::vector<double>&, double, bool)>(&stats::pbern),
+	m.def("pbern", static_cast<std::vector<double>(*)(const std::vector<int64_t>&, double, bool)>(&stats::pbern),
 		py::arg("p"), py::arg("prob"), py::arg("log") = false,
 		"Distribution function of the Bernoulli distribution.\n\n"
 
 		"Args:\n"
-		"    p (List[float]): A standard vector input.\n"
+		"    p (List[int]): A standard vector input.\n"
 		"    prob (float): The probability parameter, a real-valued input.\n"
 		"    log (bool): Return the log-density or the true form.\n\n"
 
