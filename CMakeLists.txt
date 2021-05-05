@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.12)
-project(pystats LANGUAGES CXX)
+project(PyStats LANGUAGES CXX)
 
 #---------------------------------------------------------------------------------------
 # set default build to debug
@@ -42,7 +42,7 @@ pybind11_add_module(pystats
 	src/Logistic.cpp
 	src/Normal.cpp
 	src/Poisson.cpp
-	src/StudentT.cpp
+	src/T.cpp
 	src/Uniform.cpp
 	src/Weibull.cpp)
 

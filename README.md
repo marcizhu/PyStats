@@ -39,6 +39,13 @@ You can use pip to install this library:
 pip3 install pystats
 ```
 
+Alternatively, you can also clone this repository and install the plugin manually using `pip`:
+
+```sh
+$ git clone git@github.com:marcizhu/PyStats.git
+$ pip3 install ./PyStats
+```
+
 After that, you can just `import pystats` (or do `from pystats import *` if you don't want to type `pystats.` before all functions) and you're ready to go.
 
 

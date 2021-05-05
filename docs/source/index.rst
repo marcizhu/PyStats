@@ -23,7 +23,14 @@ You can use pip to install this library:
 
 .. code:: none
 
-    pip install pystats
+   pip install pystats
+
+Alternatively, you can also clone this repository and install the plugin manually using `pip`:
+
+.. code:: none
+
+   $ git clone git@github.com:marcizhu/PyStats.git
+   $ pip3 install ./PyStats
 
 After that, you can just ``import pystats`` (or do ``from pystats import *`` if you don't want to type ``pystats.`` before all
 functions) and you're ready to go.
@@ -34,8 +41,8 @@ Contents
 --------
 
 .. toctree::
-   :maxdepth: 2
    :caption: Guide
+   :maxdepth: 2
 
    syntax_notes
    examples
@@ -44,4 +51,4 @@ Contents
    :caption: API
    :maxdepth: 2
 
-   api/index
+   api/index_dist

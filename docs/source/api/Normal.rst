@@ -43,7 +43,7 @@ List Input
 Cumulative Distribution Function
 --------------------------------
 
-The cumulative distribution function of the Normal (Gaussian) distribution:
+The cumulative distribution function (CDF) of the Normal (Gaussian) distribution:
 
 .. math::
 

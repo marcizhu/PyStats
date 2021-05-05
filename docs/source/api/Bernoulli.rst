@@ -29,12 +29,14 @@ Scalar Input
 
 .. _dbern-func-ref1:
 .. autofunction:: pystats.dbern(x: int, prob: float, log: bool = False) -> float
+   :noindex:
 
 List Input
 ~~~~~~~~~~
 
 .. _dbern-func-ref2:
 .. autofunction:: pystats.dbern(x: List[int], prob: float, log: bool = False) -> float
+   :noindex:
 
 ----
 
@@ -54,12 +56,14 @@ Scalar Input
 
 .. _pbern-func-ref1:
 .. autofunction:: pystats.pbern(p: int, prob: float, log: bool = False) -> float
+   :noindex:
 
 List Input
 ~~~~~~~~~~
 
 .. _pbern-func-ref2:
 .. autofunction:: pystats.pbern(p: List[int], prob: float, log: bool = False) -> float
+   :noindex:
 
 ----
 
@@ -79,12 +83,14 @@ Scalar Input
 
 .. _qbern-func-ref1:
 .. autofunction:: pystats.qbern(q: float, prob: float) -> float
+   :noindex:
 
 List Input
 ~~~~~~~~~~
 
 .. _qbern-func-ref2:
 .. autofunction:: pystats.qbern(q: List[float], prob: float) -> float
+   :noindex:
 
 ----
 
@@ -98,9 +104,11 @@ Scalar Output
 
 .. _rbern-func-ref1:
 .. autofunction:: pystats.rbern(prob: float) -> float
+   :noindex:
 
 List Output
 ~~~~~~~~~~~
 
-.. _rbern-func-ref3:
+.. _rbern-func-ref2:
 .. autofunction:: pystats.rbern(n: int, prob: float) -> float
+   :noindex:

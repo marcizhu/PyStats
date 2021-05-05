@@ -31,12 +31,14 @@ Scalar Input
 
 .. _df-func-ref1:
 .. autofunction:: pystats.df(x: float, df1: float = 1.0, df2: float = 1.0, log: bool = False) -> float
+   :noindex:
 
 List Input
 ~~~~~~~~~~
 
 .. _df-func-ref2:
 .. autofunction:: pystats.df(x: List[float], df1: float = 1.0, df2: float = 1.0, log: bool = False) -> List[float]
+   :noindex:
 
 ----
 
@@ -58,12 +60,14 @@ Scalar Input
 
 .. _pf-func-ref1:
 .. autofunction:: pystats.pf(p: float, df1: float = 1.0, df2: float = 1.0, log: bool = False) -> float
+   :noindex:
 
 List Input
 ~~~~~~~~~~
 
 .. _pf-func-ref2:
 .. autofunction:: pystats.pf(p: List[float], df1: float = 1.0, df2: float = 1.0, log: bool = False) -> List[float]
+   :noindex:
 
 ----
 
@@ -83,12 +87,14 @@ Scalar Input
 
 .. _qf-func-ref1:
 .. autofunction:: pystats.qf(q: float, df1: float = 1.0, df2: float = 1.0) -> float
+   :noindex:
 
 List Input
 ~~~~~~~~~~
 
 .. _qf-func-ref2:
 .. autofunction:: pystats.qf(q: List[float], df1: float = 1.0, df2: float = 1.0) -> List[float]
+   :noindex:
 
 ----
 
@@ -106,9 +112,11 @@ Scalar Output
 
 .. _rf-func-ref1:
 .. autofunction:: pystats.rf(df1: float = 1.0, df2: float = 1.0) -> float
+   :noindex:
 
 List Output
 ~~~~~~~~~~~
 
 .. _rf-func-ref2:
 .. autofunction:: pystats.rf(n: int, df1: float = 1.0, df2: float = 1.0) -> List[float]
+   :noindex:

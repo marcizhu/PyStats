@@ -43,7 +43,7 @@ List Input
 Cumulative Distribution Function
 --------------------------------
 
-The cumulative distribution function of the Logistic distribution:
+The cumulative distribution function (CDF) of the Logistic distribution:
 
 .. math::
 

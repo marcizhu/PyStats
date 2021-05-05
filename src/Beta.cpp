@@ -68,7 +68,7 @@ void Beta(py::module& m)
 		"    shape2 (float): A real-valued shape parameter.\n\n"
 
 		"Returns:\n"
-		"    A vector of pseudo-random draws from the Beta distribution.");
+		"    A list of pseudo-random draws from the Beta distribution.");
 
 	// Vector input
 	m.def("dbeta", static_cast<std::vector<double>(*)(const std::vector<double>&, double, double, bool)>(&stats::dbeta),

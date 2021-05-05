@@ -29,12 +29,14 @@ Scalar Input
 
 .. _dchisq-func-ref1:
 .. autofunction:: pystats.dchisq(x: float, dof: float = 1.0, log: bool = False) -> float
+   :noindex:
 
 List Input
 ~~~~~~~~~~
 
 .. _dchisq-func-ref2:
 .. autofunction:: pystats.dchisq(x: List[float], dof: float = 1.0, log: bool = False) -> List[float]
+   :noindex:
 
 ----
 
@@ -56,12 +58,14 @@ Scalar Input
 
 .. _pchisq-func-ref1:
 .. autofunction:: pystats.pchisq(p: float, dof: float = 1.0, log: bool = False) -> float
+   :noindex:
 
 List Input
 ~~~~~~~~~~
 
 .. _pchisq-func-ref2:
 .. autofunction:: pystats.pchisq(p: List[float], dof: float = 1.0, log: bool = False) -> List[float]
+   :noindex:
 
 ----
 
@@ -83,12 +87,14 @@ Scalar Input
 
 .. _qchisq-func-ref1:
 .. autofunction:: pystats.qchisq(q: float, dof: float = 1.0) -> float
+   :noindex:
 
 List Input
 ~~~~~~~~~~
 
 .. _qchisq-func-ref2:
 .. autofunction:: pystats.qchisq(q: List[float], dof: float = 1.0) -> List[float]
+   :noindex:
 
 ----
 
@@ -100,9 +106,11 @@ Scalar Output
 
 .. _rchisq-func-ref1:
 .. autofunction:: pystats.rchisq(dof: float = 1.0) -> float
+   :noindex:
 
 List Output
 ~~~~~~~~~~~
 
 .. _rchisq-func-ref2:
 .. autofunction:: pystats.rchisq(n: int, dof: float = 1.0) -> List[float]
+   :noindex:

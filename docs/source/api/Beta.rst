@@ -31,12 +31,14 @@ Scalar Input
 
 .. _dbeta-func-ref1:
 .. autofunction:: pystats.dbeta(x: float, shape1: float, shape2: float, log: bool = False) -> float
+   :noindex:
 
 List Input
 ~~~~~~~~~~
 
 .. _dbeta-func-ref2:
-.. autofunction:: pystats.dbeta(x: List[float], shape1: float, shape2: float, log: bool = False) -> List[float]s
+.. autofunction:: pystats.dbeta(x: List[float], shape1: float, shape2: float, log: bool = False) -> List[float]
+   :noindex:
 
 ----
 
@@ -58,12 +60,14 @@ Scalar Input
 
 .. _pbeta-func-ref1:
 .. autofunction:: pystats.pbeta(p: float, shape1: float, shape2: float, log: bool = False) -> float
+   :noindex:
 
 List Input
 ~~~~~~~~~~
 
 .. _pbeta-func-ref2:
 .. autofunction:: pystats.pbeta(p: List[float], shape1: float, shape2: float, log: bool = False) -> List[float]
+   :noindex:
 
 ----
 
@@ -83,12 +87,14 @@ Scalar Input
 
 .. _qbeta-func-ref1:
 .. autofunction:: pystats.qbeta(q: float, shape1: float, shape2: float) -> float
+   :noindex:
 
 List Input
 ~~~~~~~~~~
 
 .. _qbeta-func-ref2:
 .. autofunction:: pystats.qbeta(q: List[float], shape1: float, shape2: float) -> List[float]
+   :noindex:
 
 ----
 
@@ -106,10 +112,12 @@ Scalar Output
 
 .. _rbeta-func-ref1:
 .. autofunction:: pystats.rbeta(shape1: float, shape2: float) -> float
+   :noindex:
 
 List Output
 ~~~~~~~~~~~
 
-.. _rbeta-func-ref3:
+.. _rbeta-func-ref2:
 .. autofunction:: pystats.rbeta(n: int, shape1: float, shape2: float) -> List[float]
+   :noindex:
 

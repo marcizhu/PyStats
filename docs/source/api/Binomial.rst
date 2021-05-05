@@ -1,6 +1,6 @@
-.. Copyright (c) 2011-2021 Keith O'Hara
+.. Copyright (c) 2021 Marc Izquierdo
 
-   Distributed under the terms of the Apache License, Version 2.0.
+   Distributed under the terms of the MIT License.
 
    The full license is in the file LICENSE, distributed with this software.
 
@@ -29,12 +29,14 @@ Scalar Input
 
 .. _dbinom-func-ref1:
 .. autofunction:: pystats.dbinom(x: float, n_trials: int, prob: float, log: bool = False) -> float
+   :noindex:
 
 List Input
 ~~~~~~~~~~
 
 .. _dbinom-func-ref2:
 .. autofunction:: pystats.dbinom(x: List[float], n_trials: int, prob: float, log: bool = False) -> List[float]
+   :noindex:
 
 ----
 
@@ -54,12 +56,14 @@ Scalar Input
 
 .. _pbinom-func-ref1:
 .. autofunction:: pystats.pbinom(p: float, n_trials: int, prob: float, log: bool = False) -> float
+   :noindex:
 
 List Input
 ~~~~~~~~~~
 
 .. _pbinom-func-ref2:
 .. autofunction:: pystats.pbinom(p: List[float], n_trials: int, prob: float, log: bool = False) -> List[float]
+   :noindex:
 
 ----
 
@@ -79,12 +83,14 @@ Scalar Input
 
 .. _qbinom-func-ref1:
 .. autofunction:: pystats.qbinom(q: float, n_trials: int, prob: float) -> float
+   :noindex:
 
 List Input
 ~~~~~~~~~~
 
 .. _qbinom-func-ref2:
 .. autofunction:: pystats.qbinom(q: List[float], n_trials: int, prob: float) -> List[float]
+   :noindex:
 
 ----
 
@@ -98,9 +104,11 @@ Scalar Output
 
 .. _rbinom-func-ref1:
 .. autofunction:: pystats.rbinom(n_trials: int, prob: float) -> float
+   :noindex:
 
 List Output
 ~~~~~~~~~~~
 
-.. _rbinom-func-ref3:
+.. _rbinom-func-ref2:
 .. autofunction:: pystats.rbinom(n: int, n_trials: int, prob: float) -> List[float]
+   :noindex:

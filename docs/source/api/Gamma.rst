@@ -31,12 +31,14 @@ Scalar Input
 
 .. _dgamma-func-ref1:
 .. autofunction:: pystats.dgamma(x: float, shape: float = 1.0, scale: float = 1.0, log: bool = False) -> float
+   :noindex:
 
 List Input
 ~~~~~~~~~~
 
 .. _dgamma-func-ref2:
 .. autofunction:: pystats.dgamma(x: List[float], shape: float = 1.0, scale: float = 1.0, log: bool = False) -> List[float]
+   :noindex:
 
 ----
 
@@ -58,12 +60,14 @@ Scalar Input
 
 .. _pgamma-func-ref1:
 .. autofunction:: pystats.pgamma(p: float, shape: float = 1.0, scale: float = 1.0, log: bool = False) -> float
+   :noindex:
 
 List Input
 ~~~~~~~~~~
 
 .. _pgamma-func-ref2:
 .. autofunction:: pystats.pgamma(p: List[float], shape: float = 1.0, scale: float = 1.0, log: bool = False) -> List[float]
+   :noindex:
 
 ----
 
@@ -85,12 +89,14 @@ Scalar Input
 
 .. _qgamma-func-ref1:
 .. autofunction:: pystats.qgamma(q: float, shape: float = 1.0, scale: float = 1.0) -> float
+   :noindex:
 
 List Input
 ~~~~~~~~~~
 
 .. _qgamma-func-ref2:
 .. autofunction:: pystats.qgamma(q: List[float], shape: float = 1.0, scale: float = 1.0) -> List[float]
+   :noindex:
 
 ----
 
@@ -104,9 +110,11 @@ Scalar Output
 
 .. _rgamma-func-ref1:
 .. autofunction:: pystats.rgamma(shape: float = 1.0, scale: float = 1.0) -> float
+   :noindex:
 
 List Output
 ~~~~~~~~~~~
 
 .. _rgamma-func-ref2:
 .. autofunction:: pystats.rgamma(n: int, shape: float = 1.0, scale: float = 1.0) -> List[float]
+   :noindex:

@@ -29,12 +29,14 @@ Scalar Input
 
 .. _dexp-func-ref1:
 .. autofunction:: pystats.dexp(x: float, rate: float = 1.0, log: bool = False) -> float
+   :noindex:
 
 List Input
 ~~~~~~~~~~
 
 .. _dexp-func-ref2:
 .. autofunction:: pystats.dexp(x: List[float], rate: float = 1.0, log: bool = False) -> List[float]
+   :noindex:
 
 ----
 
@@ -54,12 +56,14 @@ Scalar Input
 
 .. _pexp-func-ref1:
 .. autofunction:: pystats.pexp(p: float, rate: float = 1.0, log: bool = False) -> float
+   :noindex:
 
 List Input
 ~~~~~~~~~~
 
 .. _pexp-func-ref2:
 .. autofunction:: pystats.pexp(p: List[float], rate: float = 1.0, log: bool = False) -> List[float]
+   :noindex:
 
 ----
 
@@ -79,12 +83,14 @@ Scalar Input
 
 .. _qexp-func-ref1:
 .. autofunction:: pystats.qexp(q: float, rate: float = 1.0) -> float
+   :noindex:
 
 List Input
 ~~~~~~~~~~
 
 .. _qexp-func-ref2:
 .. autofunction:: pystats.qexp(q: List[float], rate: float = 1.0) -> List[float]
+   :noindex:
 
 ----
 
@@ -98,9 +104,11 @@ Scalar Output
 
 .. _rexp-func-ref1:
 .. autofunction:: pystats.rexp(rate: float = 1.0) -> float
+   :noindex:
 
 List Output
 ~~~~~~~~~~~
 
 .. _rexp-func-ref2:
 .. autofunction:: pystats.rexp(n: int, rate: float = 1.0) -> List[float]
+   :noindex:

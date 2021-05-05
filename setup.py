@@ -58,7 +58,6 @@ class CMakeBuild(build_ext):
                 cmake_args += ["-GNinja"]
 
         else:
-
             # Single config generators are handled "normally"
             single_config = any(x in cmake_generator for x in {"NMake", "Ninja"})
 
@@ -98,15 +97,29 @@ class CMakeBuild(build_ext):
         )
 
 
-# The information here can also be placed in setup.cfg - better separation of
-# logic and declaration, and simpler if you include description/version in a file.
+with open("README.md", "r", encoding="utf-8") as readme:
+    long_desc = readme.read()
+
 setup(
-    name="pystats",
+    name="PyStats",
     version="0.0.1",
     author="Marc Izquierdo",
     author_email="marcizhu@gmail.com",
     description="A Python 3 package of statistical analysis and distributions",
-    long_description="",
+    long_description=long_desc,
+    long_description_content_type="text/markdown",
+    url="https://github.com/marcizhu/PyStats",
+    project_urls={
+        "Bug Tracker": "https://github.com/marcizhu/PyStats/issues",
+        "Documentation": "https://pystats.readthedocs.org",
+    },
+    classifiers=[
+        "Development Status :: 2 - Pre-Alpha",
+        "Natural Language :: English",
+        "Programming Language :: C++",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ],
     ext_modules=[CMakeExtension("pystats")],
     cmdclass={"build_ext": CMakeBuild},
     zip_safe=False,
