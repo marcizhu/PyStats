@@ -68,7 +68,7 @@ void LogNormal(py::module& m)
 		"    sd (float): The standard deviation parameter, a real-valued input.\n\n"
 
 		"Returns:\n"
-		"    A vector of pseudo-random draws from the Log-Normal distribution.");
+		"    A list of pseudo-random draws from the Log-Normal distribution.");
 
 	// Vector input
 	m.def("dlnorm", static_cast<std::vector<double>(*)(const std::vector<double>&, double, double, bool)>(&stats::dlnorm),
@@ -76,36 +76,36 @@ void LogNormal(py::module& m)
 		"Density function of the Log-Normal distribution.\n\n"
 
 		"Args:\n"
-		"    x (List[float]): A standard vector input.\n"
+		"    x (List[float]): A standard list input.\n"
 		"    mean (float): The mean parameter, a real-valued input.\n"
 		"    sd (float): The standard deviation parameter, a real-valued input.\n"
 		"    log (bool): Return the log-density or the true form.\n\n"
 
 		"Returns:\n"
-		"    A vector of density values corresponding to the elements of `x`.");
+		"    A list of density values corresponding to the elements of `x`.");
 
 	m.def("plnorm", static_cast<std::vector<double>(*)(const std::vector<double>&, double, double, bool)>(&stats::plnorm),
 		py::arg("p"), py::arg("mean") = 0.0, py::arg("sd") = 1.0, py::arg("log") = false,
 		"Distribution function of the Log-Normal distribution.\n\n"
 
 		"Args:\n"
-		"    p (List[float]): A standard vector input.\n"
+		"    p (List[float]): A standard list input.\n"
 		"    mean (float): The mean parameter, a real-valued input.\n"
 		"    sd (float): The standard deviation parameter, a real-valued input.\n"
 		"    log (bool): Return the log-density or the true form.\n\n"
 
 		"Returns:\n"
-		"    A vector of CDF values corresponding to the elements of `p`.");
+		"    A list of CDF values corresponding to the elements of `p`.");
 
 	m.def("qlnorm", static_cast<std::vector<double>(*)(const std::vector<double>&, double, double)>(&stats::qlnorm),
 		py::arg("q"), py::arg("mean") = 0.0, py::arg("sd") = 1.0,
 		"Quantile function of the Log-Normal distribution.\n\n"
 
 		"Args:\n"
-		"    q (List[float]): A standard vector input.\n"
+		"    q (List[float]): A standard list input.\n"
 		"    mean (float): The mean parameter, a real-valued input.\n"
 		"    sd (float): The standard deviation parameter, a real-valued input.\n\n"
 
 		"Returns:\n"
-		"    A vector of quantiles values corresponding to the elements of `q`.");
+		"    A list of quantiles values corresponding to the elements of `q`.");
 }

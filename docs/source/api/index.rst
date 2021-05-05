@@ -178,3 +178,18 @@ Distributions
 +----------------------------------------+--------------------------------------------------------------+
 | :ref:`rlaplace <rlaplace-func-ref1>`   | Sampling function of the Laplace distribution                |
 +----------------------------------------+--------------------------------------------------------------+
+
+.. toctree::
+   :maxdepth: 2
+
+   Log-Normal
+
++----------------------------------------+--------------------------------------------------------------+
+| :ref:`dlnorm <dlnorm-func-ref1>`       | Density function of the log Normal distribution              |
++----------------------------------------+--------------------------------------------------------------+
+| :ref:`plnorm <plnorm-func-ref1>`       | Distribution function of the log Normal distribution         |
++----------------------------------------+--------------------------------------------------------------+
+| :ref:`qlnorm <qlnorm-func-ref1>`       | Quantile function of the log Normal distribution             |
++----------------------------------------+--------------------------------------------------------------+
+| :ref:`rlnorm <rlnorm-func-ref1>`       | Sampling function of the log Normal distribution             |
++----------------------------------------+--------------------------------------------------------------+
