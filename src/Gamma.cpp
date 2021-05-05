@@ -68,7 +68,7 @@ void Gamma(py::module& m)
 		"    scale (float): The scale parameter, a real-valued input.\n\n"
 
 		"Returns:\n"
-		"    A vector of pseudo-random draws from the Gamma distribution.");
+		"    A list of pseudo-random draws from the Gamma distribution.");
 
 	// Vector input
 	m.def("dgamma", static_cast<std::vector<double>(*)(const std::vector<double>&, double, double, bool)>(&stats::dgamma),
@@ -76,36 +76,36 @@ void Gamma(py::module& m)
 		"Density function of the Gamma distribution.\n\n"
 
 		"Args:\n"
-		"    x (List[float]): A standard vector input.\n"
+		"    x (List[float]): A standard list input.\n"
 		"    shape (float): The shape parameter, a real-valued input.\n"
 		"    scale (float): The scale parameter, a real-valued input.\n"
 		"    log (bool): Return the log-density or the true form.\n\n"
 
 		"Returns:\n"
-		"    A vector of density values corresponding to the elements of `x`.");
+		"    A list of density values corresponding to the elements of `x`.");
 
 	m.def("pgamma", static_cast<std::vector<double>(*)(const std::vector<double>&, double, double, bool)>(&stats::pgamma),
 		py::arg("p"), py::arg("shape") = 1.0, py::arg("scale") = 1.0, py::arg("log") = false,
 		"Distribution function of the Gamma distribution.\n\n"
 
 		"Args:\n"
-		"    p (List[float]): A standard vector input.\n"
+		"    p (List[float]): A standard list input.\n"
 		"    shape (float): The shape parameter, a real-valued input.\n"
 		"    scale (float): The scale parameter, a real-valued input.\n"
 		"    log (bool): Return the log-density or the true form.\n\n"
 
 		"Returns:\n"
-		"    A vector of CDF values corresponding to the elements of `p`.");
+		"    A list of CDF values corresponding to the elements of `p`.");
 
 	m.def("qgamma", static_cast<std::vector<double>(*)(const std::vector<double>&, double, double)>(&stats::qgamma),
 		py::arg("q"), py::arg("shape") = 1.0, py::arg("scale") = 1.0,
 		"Quantile function of the Gamma distribution.\n\n"
 
 		"Args:\n"
-		"    q (List[float]): A standard vector input.\n"
+		"    q (List[float]): A standard list input.\n"
 		"    shape (float): The shape parameter, a real-valued input.\n"
 		"    scale (float): The scale parameter, a real-valued input.\n\n"
 
 		"Returns:\n"
-		"    A vector of quantiles values corresponding to the elements of `q`.");
+		"    A list of quantiles values corresponding to the elements of `q`.");
 }
