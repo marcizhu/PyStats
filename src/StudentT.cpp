@@ -63,7 +63,7 @@ void StudentT(py::module& m)
 		"    dof (float): The degrees of freedom parameter, a real-valued input.\n\n"
 
 		"Returns:\n"
-		"    A vector of pseudo-random draws from the t-distribution distribution.");
+		"    A list of pseudo-random draws from the t-distribution distribution.");
 
 	// Vector input
 	m.def("dt", static_cast<std::vector<double>(*)(const std::vector<double>&, double, bool)>(&stats::dt),
@@ -71,33 +71,33 @@ void StudentT(py::module& m)
 		"Density function of the t-distribution distribution.\n\n"
 
 		"Args:\n"
-		"    x (List[float]): A standard vector input.\n"
+		"    x (List[float]): A standard list input.\n"
 		"    dof (float): The degrees of freedom parameter, a real-valued input.\n"
 		"    log (bool): Return the log-density or the true form.\n\n"
 
 		"Returns:\n"
-		"    A vector of density values corresponding to the elements of `x`.");
+		"    A list of density values corresponding to the elements of `x`.");
 
 	m.def("pt", static_cast<std::vector<double>(*)(const std::vector<double>&, double, bool)>(&stats::pt),
 		py::arg("p"), py::arg("dof") = 1.0, py::arg("log") = false,
 		"Distribution function of the t-distribution distribution.\n\n"
 
 		"Args:\n"
-		"    p (List[float]): A standard vector input.\n"
+		"    p (List[float]): A standard list input.\n"
 		"    dof (float): The degrees of freedom parameter, a real-valued input.\n"
 		"    log (bool): Return the log-density or the true form.\n\n"
 
 		"Returns:\n"
-		"    A vector of CDF values corresponding to the elements of `p`.");
+		"    A list of CDF values corresponding to the elements of `p`.");
 
 	m.def("qt", static_cast<std::vector<double>(*)(const std::vector<double>&, double)>(&stats::qt),
 		py::arg("q"), py::arg("dof") = 1.0,
 		"Quantile function of the t-distribution distribution.\n\n"
 
 		"Args:\n"
-		"    q (List[float]): A standard vector input.\n"
+		"    q (List[float]): A standard list input.\n"
 		"    dof (float): The degrees of freedom parameter, a real-valued input.\n\n"
 
 		"Returns:\n"
-		"    A vector of quantiles values corresponding to the elements of `q`.");
+		"    A list of quantiles values corresponding to the elements of `q`.");
 }
