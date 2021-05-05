@@ -36,7 +36,7 @@ pybind11_add_module(pystats
 	src/Exponential.cpp
 	src/F.cpp
 	src/Gamma.cpp
-	src/InvGamma.cpp
+	src/Inverse-Gamma.cpp
 	src/Laplace.cpp
 	src/Log-Normal.cpp
 	src/Logistic.cpp

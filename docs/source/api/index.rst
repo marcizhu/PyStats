@@ -148,3 +148,18 @@ Distributions
 +----------------------------------------+--------------------------------------------------------------+
 | :ref:`rgamma <rgamma-func-ref1>`       | Sampling function of the Gamma distribution                  |
 +----------------------------------------+--------------------------------------------------------------+
+
+.. toctree::
+   :maxdepth: 2
+
+   Inverse-Gamma
+
++----------------------------------------+--------------------------------------------------------------+
+| :ref:`dinvgamma <dinvgamma-func-ref1>` | Density function of the inverse Gamma distribution           |
++----------------------------------------+--------------------------------------------------------------+
+| :ref:`pinvgamma <pinvgamma-func-ref1>` | Distribution function of the inverse Gamma distribution      |
++----------------------------------------+--------------------------------------------------------------+
+| :ref:`qinvgamma <qinvgamma-func-ref1>` | Quantile function of the inverse Gamma distribution          |
++----------------------------------------+--------------------------------------------------------------+
+| :ref:`rinvgamma <rinvgamma-func-ref1>` | Sampling function of the inverse Gamma distribution          |
++----------------------------------------+--------------------------------------------------------------+
