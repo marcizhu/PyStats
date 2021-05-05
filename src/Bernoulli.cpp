@@ -63,7 +63,7 @@ void Bernoulli(py::module& m)
 		"    prob (float): The probability parameter, a real-valued input.\n\n"
 
 		"Returns:\n"
-		"    A vector of pseudo-random draws from the Bernoulli distribution.");
+		"    A list of pseudo-random draws from the Bernoulli distribution.");
 
 	// Vector input
 	m.def("dbern", static_cast<std::vector<double>(*)(const std::vector<int64_t>&, double, bool)>(&stats::dbern),
@@ -71,33 +71,33 @@ void Bernoulli(py::module& m)
 		"Density function of the Bernoulli distribution.\n\n"
 
 		"Args:\n"
-		"    x (List[int]): A standard vector input.\n"
+		"    x (List[int]): A standard list input.\n"
 		"    prob (float): The probability parameter, a real-valued input.\n"
 		"    log (bool): Return the log-density or the true form.\n\n"
 
 		"Returns:\n"
-		"    A vector of density values corresponding to the elements of `x`.");
+		"    A list of density values corresponding to the elements of `x`.");
 
 	m.def("pbern", static_cast<std::vector<double>(*)(const std::vector<int64_t>&, double, bool)>(&stats::pbern),
 		py::arg("p"), py::arg("prob"), py::arg("log") = false,
 		"Distribution function of the Bernoulli distribution.\n\n"
 
 		"Args:\n"
-		"    p (List[int]): A standard vector input.\n"
+		"    p (List[int]): A standard list input.\n"
 		"    prob (float): The probability parameter, a real-valued input.\n"
 		"    log (bool): Return the log-density or the true form.\n\n"
 
 		"Returns:\n"
-		"    A vector of CDF values corresponding to the elements of `p`.");
+		"    A list of CDF values corresponding to the elements of `p`.");
 
 	m.def("qbern", static_cast<std::vector<double>(*)(const std::vector<double>&, double)>(&stats::qbern),
 		py::arg("q"), py::arg("prob"),
 		"Quantile function of the Bernoulli distribution.\n\n"
 
 		"Args:\n"
-		"    q (List[float]): A standard vector input.\n"
+		"    q (List[float]): A standard list input.\n"
 		"    prob (float): The probability parameter, a real-valued input.\n\n"
 
 		"Returns:\n"
-		"    A vector of quantiles values corresponding to the elements of `q`.");
+		"    A list of quantiles values corresponding to the elements of `q`.");
 }

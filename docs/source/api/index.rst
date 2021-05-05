@@ -35,11 +35,26 @@ Distributions
    Bernoulli
 
 +----------------------------------------+--------------------------------------------------------------+
-| :ref:`dbern <dbern-func-ref1>`         | density function of the Bernoulli distribution               |
+| :ref:`dbern <dbern-func-ref1>`         | Density function of the Bernoulli distribution               |
 +----------------------------------------+--------------------------------------------------------------+
-| :ref:`pbern <pbern-func-ref1>`         | distribution function of the Bernoulli distribution          |
+| :ref:`pbern <pbern-func-ref1>`         | Distribution function of the Bernoulli distribution          |
 +----------------------------------------+--------------------------------------------------------------+
-| :ref:`qbern <qbern-func-ref1>`         | quantile function of the Bernoulli distribution              |
+| :ref:`qbern <qbern-func-ref1>`         | Quantile function of the Bernoulli distribution              |
 +----------------------------------------+--------------------------------------------------------------+
-| :ref:`rbern <rbern-func-ref1>`         | sampling function of the Bernoulli distribution              |
+| :ref:`rbern <rbern-func-ref1>`         | Sampling function of the Bernoulli distribution              |
++----------------------------------------+--------------------------------------------------------------+
+
+.. toctree::
+   :maxdepth: 2
+   
+   Beta
+
++----------------------------------------+--------------------------------------------------------------+
+| :ref:`dbeta <dbeta-func-ref1>`         | Density function of the Beta distribution                    |
++----------------------------------------+--------------------------------------------------------------+
+| :ref:`pbeta <pbeta-func-ref1>`         | Distribution function of the Beta distribution               |
++----------------------------------------+--------------------------------------------------------------+
+| :ref:`qbeta <qbeta-func-ref1>`         | Quantile function of the Beta distribution                   |
++----------------------------------------+--------------------------------------------------------------+
+| :ref:`rbeta <rbeta-func-ref1>`         | Sampling function of the Beta distribution                   |
 +----------------------------------------+--------------------------------------------------------------+

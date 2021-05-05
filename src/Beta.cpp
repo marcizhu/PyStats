@@ -76,36 +76,36 @@ void Beta(py::module& m)
 		"Density function of the Beta distribution.\n\n"
 
 		"Args:\n"
-		"    x (List[float]): A standard vector input.\n"
+		"    x (List[float]): A standard list input.\n"
 		"    shape1 (float): A real-valued shape parameter.\n"
 		"    shape2 (float): A real-valued shape parameter.\n"
 		"    log (bool): Return the log-density or the true form.\n\n"
 
 		"Returns:\n"
-		"    A vector of density values corresponding to the elements of `x`.");
+		"    A list of density values corresponding to the elements of `x`.");
 
 	m.def("pbeta", static_cast<std::vector<double>(*)(const std::vector<double>&, double, double, bool)>(&stats::pbeta),
 		py::arg("p"), py::arg("shape1"), py::arg("shape2"), py::arg("log") = false,
 		"Distribution function of the Beta distribution.\n\n"
 
 		"Args:\n"
-		"    p (List[float]): A standard vector input.\n"
+		"    p (List[float]): A standard list input.\n"
 		"    shape1 (float): A real-valued shape parameter.\n"
 		"    shape2 (float): A real-valued shape parameter.\n"
 		"    log (bool): Return the log-density or the true form.\n\n"
 
 		"Returns:\n"
-		"    A vector of CDF values corresponding to the elements of `p`.");
+		"    A list of CDF values corresponding to the elements of `p`.");
 
 	m.def("qbeta", static_cast<std::vector<double>(*)(const std::vector<double>&, double, double)>(&stats::qbeta),
 		py::arg("q"), py::arg("shape1"), py::arg("shape2"),
 		"Quantile function of the Beta distribution.\n\n"
 
 		"Args:\n"
-		"    q (List[float]): A standard vector input.\n"
+		"    q (List[float]): A standard list input.\n"
 		"    shape1 (float): A real-valued shape parameter.\n"
 		"    shape2 (float): A real-valued shape parameter.\n\n"
 
 		"Returns:\n"
-		"    A vector of quantiles values corresponding to the elements of `q`.");
+		"    A list of quantiles values corresponding to the elements of `q`.");
 }
