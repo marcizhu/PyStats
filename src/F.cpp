@@ -68,7 +68,7 @@ void F(py::module& m)
 		"    df2 (float): A degrees of freedom parameter, a real-valued input.\n\n"
 
 		"Returns:\n"
-		"    A vector of pseudo-random draws from the F-distribution distribution.");
+		"    A list of pseudo-random draws from the F-distribution distribution.");
 
 	// Vector input
 	m.def("df", static_cast<std::vector<double>(*)(const std::vector<double>&, double, double, bool)>(&stats::df),
@@ -76,36 +76,36 @@ void F(py::module& m)
 		"Density function of the F-distribution distribution.\n\n"
 
 		"Args:\n"
-		"    x (List[float]): A standard vector input.\n"
+		"    x (List[float]): A standard list input.\n"
 		"    df1 (float): A degrees of freedom parameter, a real-valued input.\n"
 		"    df2 (float): A degrees of freedom parameter, a real-valued input.\n"
 		"    log (bool): Return the log-density or the true form.\n\n"
 
 		"Returns:\n"
-		"    A vector of density values corresponding to the elements of `x`.");
+		"    A list of density values corresponding to the elements of `x`.");
 
 	m.def("pf", static_cast<std::vector<double>(*)(const std::vector<double>&, double, double, bool)>(&stats::pf),
 		py::arg("p"), py::arg("df1") = 1.0, py::arg("df2") = 1.0, py::arg("log") = false,
 		"Distribution function of the F-distribution distribution.\n\n"
 
 		"Args:\n"
-		"    p (List[float]): A standard vector input.\n"
+		"    p (List[float]): A standard list input.\n"
 		"    df1 (float): A degrees of freedom parameter, a real-valued input.\n"
 		"    df2 (float): A degrees of freedom parameter, a real-valued input.\n"
 		"    log (bool): Return the log-density or the true form.\n\n"
 
 		"Returns:\n"
-		"    A vector of CDF values corresponding to the elements of `p`.");
+		"    A list of CDF values corresponding to the elements of `p`.");
 
 	m.def("qf", static_cast<std::vector<double>(*)(const std::vector<double>&, double, double)>(&stats::qf),
 		py::arg("q"), py::arg("df1") = 1.0, py::arg("df2") = 1.0,
 		"Quantile function of the F-distribution distribution.\n\n"
 
 		"Args:\n"
-		"    q (List[float]): A standard vector input.\n"
+		"    q (List[float]): A standard list input.\n"
 		"    df1 (float): A degrees of freedom parameter, a real-valued input.\n"
 		"    df2 (float): A degrees of freedom parameter, a real-valued input.\n\n"
 
 		"Returns:\n"
-		"    A vector of quantiles values corresponding to the elements of `q`.");
+		"    A list of quantiles values corresponding to the elements of `q`.");
 }
