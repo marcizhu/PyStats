@@ -268,3 +268,18 @@ Distributions
 +----------------------------------------+--------------------------------------------------------------+
 | :ref:`runif <runif-func-ref1>`         | Sampling function of the Uniform distribution                |
 +----------------------------------------+--------------------------------------------------------------+
+
+.. toctree::
+   :maxdepth: 2
+
+   Weibull
+
++----------------------------------------+--------------------------------------------------------------+
+| :ref:`dweibull <dweibull-func-ref1>`   | Density function of the Weibull distribution                 |
++----------------------------------------+--------------------------------------------------------------+
+| :ref:`pweibull <pweibull-func-ref1>`   | Distribution function of the Weibull distribution            |
++----------------------------------------+--------------------------------------------------------------+
+| :ref:`qweibull <qweibull-func-ref1>`   | Quantile function of the Weibull distribution                |
++----------------------------------------+--------------------------------------------------------------+
+| :ref:`rweibull <rweibull-func-ref1>`   | Sampling function of the Weibull distribution                |
++----------------------------------------+--------------------------------------------------------------+
