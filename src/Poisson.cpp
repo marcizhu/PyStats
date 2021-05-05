@@ -63,7 +63,7 @@ void Poisson(py::module& m)
 		"    rate (float): The rate parameter, a real-valued input.\n\n"
 
 		"Returns:\n"
-		"    A vector of pseudo-random draws from the Poisson distribution.");
+		"    A list of pseudo-random draws from the Poisson distribution.");
 
 	// Vector input
 	m.def("dpois", static_cast<std::vector<int64_t>(*)(const std::vector<int64_t>&, double, bool)>(&stats::dpois),
@@ -71,33 +71,33 @@ void Poisson(py::module& m)
 		"Density function of the Poisson distribution.\n\n"
 
 		"Args:\n"
-		"    x (List[float]): A standard vector input.\n"
+		"    x (List[float]): A standard list input.\n"
 		"    rate (float): The rate parameter, a real-valued input.\n"
 		"    log (bool): Return the log-density or the true form.\n\n"
 
 		"Returns:\n"
-		"    A vector of density values corresponding to the elements of `x`.");
+		"    A list of density values corresponding to the elements of `x`.");
 
 	m.def("ppois", static_cast<std::vector<int64_t>(*)(const std::vector<int64_t>&, double, bool)>(&stats::ppois),
 		py::arg("p"), py::arg("rate"), py::arg("log") = false,
 		"Distribution function of the Poisson distribution.\n\n"
 
 		"Args:\n"
-		"    p (List[float]): A standard vector input.\n"
+		"    p (List[float]): A standard list input.\n"
 		"    rate (float): The rate parameter, a real-valued input.\n"
 		"    log (bool): Return the log-density or the true form.\n\n"
 
 		"Returns:\n"
-		"    A vector of CDF values corresponding to the elements of `p`.");
+		"    A list of CDF values corresponding to the elements of `p`.");
 
 	m.def("qpois", static_cast<std::vector<double>(*)(const std::vector<double>&, double)>(&stats::qpois),
 		py::arg("q"), py::arg("rate"),
 		"Quantile function of the Poisson distribution.\n\n"
 
 		"Args:\n"
-		"    q (List[float]): A standard vector input.\n"
+		"    q (List[float]): A standard list input.\n"
 		"    rate (float): The rate parameter, a real-valued input.\n\n"
 
 		"Returns:\n"
-		"    A vector of quantiles values corresponding to the elements of `q`.");
+		"    A list of quantiles values corresponding to the elements of `q`.");
 }
