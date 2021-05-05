@@ -88,3 +88,18 @@ Distributions
 +----------------------------------------+--------------------------------------------------------------+
 | :ref:`rcauchy <rcauchy-func-ref1>`     | Sampling function of the Cauchy distribution                 |
 +----------------------------------------+--------------------------------------------------------------+
+
+.. toctree::
+   :maxdepth: 2
+
+   Chi-Squared
+
++----------------------------------------+--------------------------------------------------------------+
+| :ref:`dchisq <dchisq-func-ref1>`       | Density function of the Chi-squared distribution             |
++----------------------------------------+--------------------------------------------------------------+
+| :ref:`pchisq <pchisq-func-ref1>`       | Distribution function of the Chi-squared distribution        |
++----------------------------------------+--------------------------------------------------------------+
+| :ref:`qchisq <qchisq-func-ref1>`       | Quantile function of the Chi-squared distribution            |
++----------------------------------------+--------------------------------------------------------------+
+| :ref:`rchisq <rchisq-func-ref1>`       | Sampling function of the Chi-squared distribution            |
++----------------------------------------+--------------------------------------------------------------+
