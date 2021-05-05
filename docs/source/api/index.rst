@@ -163,3 +163,18 @@ Distributions
 +----------------------------------------+--------------------------------------------------------------+
 | :ref:`rinvgamma <rinvgamma-func-ref1>` | Sampling function of the inverse Gamma distribution          |
 +----------------------------------------+--------------------------------------------------------------+
+
+.. toctree::
+   :maxdepth: 2
+
+   Laplace
+
++----------------------------------------+--------------------------------------------------------------+
+| :ref:`dlaplace <dlaplace-func-ref1>`   | Density function of the Laplace distribution                 |
++----------------------------------------+--------------------------------------------------------------+
+| :ref:`plaplace <plaplace-func-ref1>`   | Distribution function of the Laplace distribution            |
++----------------------------------------+--------------------------------------------------------------+
+| :ref:`qlaplace <qlaplace-func-ref1>`   | Quantile function of the Laplace distribution                |
++----------------------------------------+--------------------------------------------------------------+
+| :ref:`rlaplace <rlaplace-func-ref1>`   | Sampling function of the Laplace distribution                |
++----------------------------------------+--------------------------------------------------------------+

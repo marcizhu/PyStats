@@ -68,7 +68,7 @@ void Laplace(py::module& m)
 		"    sigma (float): The scale parameter, a real-valued input.\n\n"
 
 		"Returns:\n"
-		"    A vector of pseudo-random draws from the Laplace distribution.");
+		"    A list of pseudo-random draws from the Laplace distribution.");
 
 	// Vector input
 	m.def("dlaplace", static_cast<std::vector<double>(*)(const std::vector<double>&, double, double, bool)>(&stats::dlaplace),
@@ -76,36 +76,36 @@ void Laplace(py::module& m)
 		"Density function of the Laplace distribution.\n\n"
 
 		"Args:\n"
-		"    x (List[float]): A standard vector input.\n"
+		"    x (List[float]): A standard list input.\n"
 		"    mu (float): The location parameter, a real-valued input.\n"
 		"    sigma (float): The scale parameter, a real-valued input.\n"
 		"    log (bool): Return the log-density or the true form.\n\n"
 
 		"Returns:\n"
-		"    A vector of density values corresponding to the elements of `x`.");
+		"    A list of density values corresponding to the elements of `x`.");
 
 	m.def("plaplace", static_cast<std::vector<double>(*)(const std::vector<double>&, double, double, bool)>(&stats::plaplace),
 		py::arg("p"), py::arg("mu") = 0.0, py::arg("sigma") = 1.0, py::arg("log") = false,
 		"Distribution function of the Laplace distribution.\n\n"
 
 		"Args:\n"
-		"    p (List[float]): A standard vector input.\n"
+		"    p (List[float]): A standard list input.\n"
 		"    mu (float): The location parameter, a real-valued input.\n"
 		"    sigma (float): The scale parameter, a real-valued input.\n"
 		"    log (bool): Return the log-density or the true form.\n\n"
 
 		"Returns:\n"
-		"    A vector of CDF values corresponding to the elements of `p`.");
+		"    A list of CDF values corresponding to the elements of `p`.");
 
 	m.def("qlaplace", static_cast<std::vector<double>(*)(const std::vector<double>&, double, double)>(&stats::qlaplace),
 		py::arg("q"), py::arg("mu") = 0.0, py::arg("sigma") = 1.0,
 		"Quantile function of the Laplace distribution.\n\n"
 
 		"Args:\n"
-		"    q (List[float]): A standard vector input.\n"
+		"    q (List[float]): A standard list input.\n"
 		"    mu (float): The location parameter, a real-valued input.\n"
 		"    sigma (float): The scale parameter, a real-valued input.\n\n"
 
 		"Returns:\n"
-		"    A vector of quantiles values corresponding to the elements of `q`.");
+		"    A list of quantiles values corresponding to the elements of `q`.");
 }
