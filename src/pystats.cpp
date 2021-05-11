@@ -16,28 +16,40 @@ PYBIND11_MODULE(pystats, m)
 		"Compute the mean of the given data\n\n"
 
 		"Args:\n"
-		"    x (List[float]): A standard list input.\n"
+		"    x (List[float]): A standard list input.\n\n"
 
 		"Returns:\n"
-		"    The mean of the values in `x`.");
+		"    The mean of the values in `x`.\n\n"
+
+		"Example:\n"
+		"    >>> pystats.mean([1,2,3,4,5])\n"
+		"    3.0");
 
 	m.def("sd", &sd, py::arg("x"),
 		"Compute the standard deviation of the given data\n\n"
 
 		"Args:\n"
-		"    x (List[float]): A standard list input.\n"
+		"    x (List[float]): A standard list input.\n\n"
 
 		"Returns:\n"
-		"    The standard deviation (unbiased) of the values in `x`.");
+		"    The standard deviation (unbiased) of the values in `x`.\n\n"
+
+		"Example:\n"
+		"    >>> pystats.sd([1,2,3,4,5])\n"
+		"    1.581138");
 
 	m.def("var", &var, py::arg("x"),
 		"Compute the variance of the given data\n\n"
 
 		"Args:\n"
-		"    x (List[float]): A standard list input.\n"
+		"    x (List[float]): A standard list input.\n\n"
 
 		"Returns:\n"
-		"    The variance (unbiased) of the values in `x`.");
+		"    The variance (unbiased) of the values in `x`.\n\n"
+
+		"Example:\n"
+		"    >>> pystats.var([1,2,3,4,5])\n"
+		"    2.5");
 
 	REGISTER_DISTRIBUTION(Bernoulli);
 	REGISTER_DISTRIBUTION(Beta);

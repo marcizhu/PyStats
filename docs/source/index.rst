@@ -52,3 +52,4 @@ Contents
    :maxdepth: 2
 
    api/index_dist
+   api/index_other
