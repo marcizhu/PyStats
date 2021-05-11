@@ -10,11 +10,34 @@ PYBIND11_MODULE(pystats, m)
 {
 	m.doc() = "R-like statistical functions and distributions for Python 3";
 
-	m.attr("__version__") = "0.0.1";
+	m.attr("__version__") = "0.1.dev1";
 
-	m.def("mean", &mean, py::arg("x"), "Compute the mean of the given data");
-	m.def("sd",   &sd,   py::arg("x"), "Compute the standard deviation of the given data");
-	m.def("var",  &var,  py::arg("x"), "Compute the variance of the given data");
+	m.def("mean", &mean, py::arg("x"),
+		"Compute the mean of the given data\n\n"
+
+		"Args:\n"
+		"    x (List[float]): A standard list input.\n"
+
+		"Returns:\n"
+		"    The mean of the values in `x`.");
+
+	m.def("sd", &sd, py::arg("x"),
+		"Compute the standard deviation of the given data\n\n"
+
+		"Args:\n"
+		"    x (List[float]): A standard list input.\n"
+
+		"Returns:\n"
+		"    The standard deviation (unbiased) of the values in `x`.");
+
+	m.def("var", &var, py::arg("x"),
+		"Compute the variance of the given data\n\n"
+
+		"Args:\n"
+		"    x (List[float]): A standard list input.\n"
+
+		"Returns:\n"
+		"    The variance (unbiased) of the values in `x`.");
 
 	REGISTER_DISTRIBUTION(Bernoulli);
 	REGISTER_DISTRIBUTION(Beta);
