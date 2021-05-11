@@ -76,11 +76,12 @@ from collections import defaultdict
 
 def process_overloaded_items(app, what, name, obj, options, lines):
 	if not "Overloaded function" in lines[1]:
+		del lines[0]
 		return
 
 	index = app.doc_dict[name]
-	first = next((lines.index(l) for l in lines if l.startswith(str(index + 0) + ".")))
-	last  = next((lines.index(l) for l in lines if l.startswith(str(index + 1) + ".")), len(lines))
+	first = next((lines.index(l) for l in lines if l.startswith(str(index + 0) + ". ")))
+	last  = next((lines.index(l) for l in lines if l.startswith(str(index + 1) + ". ")), len(lines))
 
 	del lines[0:first+1]
 	del lines[last-first-1:]

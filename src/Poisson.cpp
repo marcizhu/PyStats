@@ -13,6 +13,10 @@ void Poisson(py::module& m)
 		py::arg("x"), py::arg("rate"), py::arg("log") = false,
 		"Density function of the Poisson distribution.\n\n"
 
+		"Example:\n"
+		"    >>> pystats.dpois(8, 10.0)\n"
+		"    0.11259903214902026\n\n"
+
 		"Args:\n"
 		"    x (float): A real-valued input.\n"
 		"    rate (float): The rate parameter, a real-valued input.\n"
@@ -24,6 +28,10 @@ void Poisson(py::module& m)
 	m.def("ppois", static_cast<double(*)(stats::llint_t, double, bool)>(&stats::ppois),
 		py::arg("p"), py::arg("rate"), py::arg("log") = false,
 		"Distribution function of the Poisson distribution.\n\n"
+
+		"Example:\n"
+		"    >>> pystats.ppois(8, 10.0)\n"
+		"    0.3328196787507189\n\n"
 
 		"Args:\n"
 		"    p (float): A real-valued input.\n"
@@ -37,6 +45,10 @@ void Poisson(py::module& m)
 		py::arg("q"), py::arg("rate"),
 		"Quantile function of the Poisson distribution.\n\n"
 
+		"Example:\n"
+		"    >>> pystats.qpois(0.9, 10.0)\n"
+		"    14.0\n\n"
+
 		"Args:\n"
 		"    q (float): A real-valued input.\n"
 		"    rate (float): The rate parameter, a real-valued input.\n\n"
@@ -48,6 +60,10 @@ void Poisson(py::module& m)
 		py::arg("rate"),
 		"Random sampling function for the Poisson distribution.\n\n"
 
+		"Example:\n"
+		"    >>> pystats.rpois(10.0)\n"
+		"    7.0\n\n"
+
 		"Args:\n"
 		"    rate (float): The rate parameter, a real-valued input.\n\n"
 
@@ -58,6 +74,10 @@ void Poisson(py::module& m)
 		py::arg("n"), py::arg("rate"),
 		"Random sampling function for the Poisson distribution.\n\n"
 
+		"Example:\n"
+		"    >>> pystats.rpois(4, 10.0)\n"
+		"    [11.0, 8.0, 8.0, 9.0]\n\n"
+
 		"Args:\n"
 		"    n (int): The number of output values.\n"
 		"    rate (float): The rate parameter, a real-valued input.\n\n"
@@ -66,9 +86,13 @@ void Poisson(py::module& m)
 		"    A list of pseudo-random draws from the Poisson distribution.");
 
 	// Vector input
-	m.def("dpois", static_cast<std::vector<int64_t>(*)(const std::vector<int64_t>&, double, bool)>(&stats::dpois),
+	m.def("dpois", static_cast<std::vector<double>(*)(const std::vector<int64_t>&, double, bool)>(&stats::dpois),
 		py::arg("x"), py::arg("rate"), py::arg("log") = false,
 		"Density function of the Poisson distribution.\n\n"
+
+		"Example:\n"
+		"    >>> pystats.dpois([2, 3, 4], 10.0)\n"
+		"    [0.0022699964881242435, 0.007566654960414158, 0.01891663740103532]\n\n"
 
 		"Args:\n"
 		"    x (List[float]): A standard list input.\n"
@@ -78,9 +102,13 @@ void Poisson(py::module& m)
 		"Returns:\n"
 		"    A list of density values corresponding to the elements of `x`.");
 
-	m.def("ppois", static_cast<std::vector<int64_t>(*)(const std::vector<int64_t>&, double, bool)>(&stats::ppois),
+	m.def("ppois", static_cast<std::vector<double>(*)(const std::vector<int64_t>&, double, bool)>(&stats::ppois),
 		py::arg("p"), py::arg("rate"), py::arg("log") = false,
 		"Distribution function of the Poisson distribution.\n\n"
+
+		"Example:\n"
+		"    >>> pystats.ppois([2, 3, 4], 10.0)\n"
+		"    [0.0027693957155115762, 0.010336050675925718, 0.029252688076961075]\n\n"
 
 		"Args:\n"
 		"    p (List[float]): A standard list input.\n"
@@ -93,6 +121,10 @@ void Poisson(py::module& m)
 	m.def("qpois", static_cast<std::vector<double>(*)(const std::vector<double>&, double)>(&stats::qpois),
 		py::arg("q"), py::arg("rate"),
 		"Quantile function of the Poisson distribution.\n\n"
+
+		"Example:\n"
+		"    >>> pystats.qpois([0.3, 0.5, 0.8], 10.0)\n"
+		"    [8.0, 10.0, 13.0]\n\n"
 
 		"Args:\n"
 		"    q (List[float]): A standard list input.\n"

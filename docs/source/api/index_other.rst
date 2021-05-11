@@ -22,7 +22,7 @@ The mean of the input data is calculated using:
 
    \overline{x}=\frac{\sum_{i=1}^{n}{x_i}}{n}
 
-.. autofunction:: pystats.mean(x: List[float]) -> List[float]
+.. autofunction:: pystats.mean(x: List[float]) -> float
    :noindex:
 
 ----
@@ -38,7 +38,7 @@ The standard deviation of the input data is calculated using:
 
 This function returns the standard deviation of the sample; that is, it returns the unbiased standard deviation.
 
-.. autofunction:: pystats.sd(x: List[float]) -> List[float]
+.. autofunction:: pystats.sd(x: List[float]) -> float
    :noindex:
 
 ----
@@ -54,5 +54,5 @@ The variance of the input data is calculated using:
 
 This function returns the variance of the sample; that is, it returns the unbiased variance.
 
-.. autofunction:: pystats.var(x: List[float]) -> List[float]
+.. autofunction:: pystats.var(x: List[float]) -> float
    :noindex:

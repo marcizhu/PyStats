@@ -27,7 +27,6 @@ double sd(const std::vector<double>& X)
 	double mean_val = mean(X);
 	double sq_val = sqaccu(X) / static_cast<double>(X.size() - 1);
 	return std::sqrt(sq_val - (static_cast<double>(X.size()) / static_cast<double>(X.size() - 1)) * mean_val * mean_val);
-
 }
 
 double var(const std::vector<double>& X)

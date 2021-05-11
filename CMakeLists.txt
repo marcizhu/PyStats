@@ -5,24 +5,14 @@ project(PyStats LANGUAGES CXX)
 # set default build to debug
 #---------------------------------------------------------------------------------------
 if(NOT CMAKE_BUILD_TYPE)
-	set(CMAKE_BUILD_TYPE "Debug" CACHE STRING "Choose Release or Debug" FORCE)
+	set(CMAKE_BUILD_TYPE "Release" CACHE STRING "Choose Release or Debug" FORCE)
 endif()
-
-#---------------------------------------------------------------------------------------
-# compiler config
-#---------------------------------------------------------------------------------------
-set(CMAKE_CXX_EXTENSIONS OFF)
-
-option(CODE_COVERAGE "Enable coverage reporting" OFF)
-option(BUILD_TESTS "Build unit tests" OFF)
 
 message(STATUS "Build type: " ${CMAKE_BUILD_TYPE})
 
-if(BUILD_TESTS)
-	enable_testing()
-#	add_subdirectory(tests)
-endif()
-
+#---------------------------------------------------------------------------------------
+# project config
+#---------------------------------------------------------------------------------------
 add_subdirectory(deps)
 
 pybind11_add_module(pystats

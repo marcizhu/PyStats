@@ -13,6 +13,10 @@ void Uniform(py::module& m)
 		py::arg("x"), py::arg("min") = 0.0, py::arg("max") = 1.0, py::arg("log") = false,
 		"Density function of the Uniform distribution.\n\n"
 
+		"Example:\n"
+		"    >>> pystats.dunif(0.5, -1.0, 2.0)\n"
+		"    0.3333333333333333\n\n"
+
 		"Args:\n"
 		"    x (float): A real-valued input.\n"
 		"    min (float): The lower limit of the distribution, a real-valued input.\n"
@@ -25,6 +29,10 @@ void Uniform(py::module& m)
 	m.def("punif", static_cast<double(*)(double, double, double, bool)>(&stats::punif),
 		py::arg("p"), py::arg("min") = 0.0, py::arg("max") = 1.0, py::arg("log") = false,
 		"Distribution function of the Uniform distribution.\n\n"
+
+		"Example:\n"
+		"    >>> pystats.punif(0.5, -1.0, 2.0)\n"
+		"    0.5\n\n"
 
 		"Args:\n"
 		"    p (float): A real-valued input.\n"
@@ -39,6 +47,10 @@ void Uniform(py::module& m)
 		py::arg("q"), py::arg("min") = 0.0, py::arg("max") = 1.0,
 		"Quantile function of the Uniform distribution.\n\n"
 
+		"Example:\n"
+		"    >>> pystats.qunif(0.75, -1.0, 2.0)\n"
+		"    1.25\n\n"
+
 		"Args:\n"
 		"    q (float): A real-valued input.\n"
 		"    min (float): The lower limit of the distribution, a real-valued input.\n"
@@ -51,6 +63,10 @@ void Uniform(py::module& m)
 		py::arg("min") = 0.0, py::arg("max") = 1.0,
 		"Random sampling function for the Uniform distribution.\n\n"
 
+		"Example:\n"
+		"    >>> pystats.runif(-1.0, 2.0)\n"
+		"    1.0599044629461352\n\n"
+
 		"Args:\n"
 		"    min (float): The lower limit of the distribution, a real-valued input.\n"
 		"    max (float): The upper limit of the distribution, a real-valued input.\n\n"
@@ -61,6 +77,10 @@ void Uniform(py::module& m)
 	m.def("runif", [](size_t n, double min, double max) { return stats::runif<std::vector<double>>(1, n, min, max); },
 		py::arg("n"), py::arg("min") = 0.0, py::arg("max") = 1.0,
 		"Random sampling function for the Uniform distribution.\n\n"
+
+		"Example:\n"
+		"    >>> pystats.runif(3, -1.0, 2.0)\n"
+		"    [1.0552953561528309, 0.81837699091385, 0.17769962603787082]\n\n"
 
 		"Args:\n"
 		"    n (int): The number of output values.\n"
@@ -75,6 +95,10 @@ void Uniform(py::module& m)
 		py::arg("x"), py::arg("min") = 0.0, py::arg("max") = 1.0, py::arg("log") = false,
 		"Density function of the Uniform distribution.\n\n"
 
+		"Example:\n"
+		"    >>> pystats.dunif([-2.0, 0.0, 2.0], -1.0, 3.0)\n"
+		"    [0.0, 0.25, 0.25]\n\n"
+
 		"Args:\n"
 		"    x (List[float]): A standard list input.\n"
 		"    min (float): The lower limit of the distribution, a real-valued input.\n"
@@ -88,6 +112,10 @@ void Uniform(py::module& m)
 		py::arg("p"), py::arg("min") = 0.0, py::arg("max") = 1.0, py::arg("log") = false,
 		"Distribution function of the Uniform distribution.\n\n"
 
+		"Example:\n"
+		"    >>> pystats.punif([-2.0, 0.0, 2.0], -1.0, 3.0)\n"
+		"    [0.0, 0.25, 0.75]\n\n"
+
 		"Args:\n"
 		"    p (List[float]): A standard list input.\n"
 		"    min (float): The lower limit of the distribution, a real-valued input.\n"
@@ -100,6 +128,10 @@ void Uniform(py::module& m)
 	m.def("qunif", static_cast<std::vector<double>(*)(const std::vector<double>&, double, double)>(&stats::qunif),
 		py::arg("q"), py::arg("min") = 0.0, py::arg("max") = 1.0,
 		"Quantile function of the Uniform distribution.\n\n"
+
+		"Example:\n"
+		"    >>> pystats.qunif([0.3, 0.5, 0.9], -1.0, 3.0)\n"
+		"    [0.2, 1.0, 2.6]\n\n"
 
 		"Args:\n"
 		"    q (List[float]): A standard list input.\n"

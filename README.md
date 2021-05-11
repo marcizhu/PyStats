@@ -120,6 +120,7 @@ rval = pystats.rt(dof=30)
 
 # List output
 beta_rvs = pystats.rbeta(100, 3.0, 2.0)
+
 # List input
 beta_cdf_vals = pystats.pbeta(beta_rvs, 3.0, 2.0)
 ```

@@ -13,6 +13,10 @@ void Bernoulli(py::module& m)
 		py::arg("x"), py::arg("prob"), py::arg("log") = false,
 		"Density function of the Bernoulli distribution.\n\n"
 
+		"Example:\n"
+		"    >>> pystats.dbern(1, 0.6)\n"
+		"    0.6\n\n"
+
 		"Args:\n"
 		"    x (int): An integral-valued input, equal to 0 or 1.\n"
 		"    prob (float): The probability parameter, a real-valued input.\n"
@@ -24,6 +28,10 @@ void Bernoulli(py::module& m)
 	m.def("pbern", static_cast<double(*)(stats::llint_t, double, bool)>(&stats::pbern),
 		py::arg("p"), py::arg("prob"), py::arg("log") = false,
 		"Distribution function of the Bernoulli distribution.\n\n"
+
+		"Example:\n"
+		"    >>> pystats.pbern(1, 0.6)\n"
+		"    1.0\n\n"
 
 		"Args:\n"
 		"    p (int): A value equal to 0 or 1.\n"
@@ -37,6 +45,10 @@ void Bernoulli(py::module& m)
 		py::arg("q"), py::arg("prob"),
 		"Quantile function of the Bernoulli distribution.\n\n"
 
+		"Example:\n"
+		"    >>> pystats.qbern(0.5, 0.4)\n"
+		"    0.0\n\n"
+
 		"Args:\n"
 		"    q (float): A real-valued input.\n"
 		"    prob (float): The probability parameter, a real-valued input.\n\n"
@@ -48,6 +60,10 @@ void Bernoulli(py::module& m)
 		py::arg("prob"),
 		"Random sampling function for the Bernoulli distribution.\n\n"
 
+		"Example:\n"
+		"    >>> pystats.rbern(0.4)\n"
+		"    0.0\n\n"
+
 		"Args:\n"
 		"    prob (float): The probability parameter, a real-valued input.\n\n"
 
@@ -57,6 +73,10 @@ void Bernoulli(py::module& m)
 	m.def("rbern", [](size_t n, double prob) { return stats::rbern<std::vector<double>>(1, n, prob); },
 		py::arg("n"), py::arg("prob"),
 		"Random sampling function for the Bernoulli distribution.\n\n"
+
+		"Example:\n"
+		"    >>> pystats.rbern(10, 0.4)\n"
+		"    [1.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 1.0, 0.0, 0.0]\n\n"
 
 		"Args:\n"
 		"    n (int): The number of output values.\n"
@@ -70,6 +90,10 @@ void Bernoulli(py::module& m)
 		py::arg("x"), py::arg("prob"), py::arg("log") = false,
 		"Density function of the Bernoulli distribution.\n\n"
 
+		"Example:\n"
+		"    >>> pystats.dbern([0, 1], 0.6)\n"
+		"    [0.4, 0.6]\n\n"
+
 		"Args:\n"
 		"    x (List[int]): A standard list input.\n"
 		"    prob (float): The probability parameter, a real-valued input.\n"
@@ -82,6 +106,10 @@ void Bernoulli(py::module& m)
 		py::arg("p"), py::arg("prob"), py::arg("log") = false,
 		"Distribution function of the Bernoulli distribution.\n\n"
 
+		"Example:\n"
+		"    >>> pystats.pbern([0, 1], 0.6)\n"
+		"    [0.4, 1.0]\n\n"
+
 		"Args:\n"
 		"    p (List[int]): A standard list input.\n"
 		"    prob (float): The probability parameter, a real-valued input.\n"
@@ -93,6 +121,10 @@ void Bernoulli(py::module& m)
 	m.def("qbern", static_cast<std::vector<double>(*)(const std::vector<double>&, double)>(&stats::qbern),
 		py::arg("q"), py::arg("prob"),
 		"Quantile function of the Bernoulli distribution.\n\n"
+
+		"Example:\n"
+		"    >>> pystats.pbern([0.3, 0.7], 0.6)\n"
+		"    [0.0, 1.0]\n\n"
 
 		"Args:\n"
 		"    q (List[float]): A standard list input.\n"
