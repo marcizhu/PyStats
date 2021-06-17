@@ -10,7 +10,7 @@ PYBIND11_MODULE(pystats, m)
 {
 	m.doc() = "R-like statistical functions and distributions for Python 3";
 
-	m.attr("__version__") = "0.1.dev1";
+	m.attr("__version__") = "0.1";
 
 	m.def("mean", &mean, py::arg("x"),
 		"Compute the mean of the given data\n\n"

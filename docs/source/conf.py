@@ -22,7 +22,7 @@ copyright = '2021, Marc Izquierdo'
 author = 'Marc Izquierdo'
 
 # The full version, including alpha/beta/rc tags
-release = '0.1.dev1'
+release = '0.1'
 
 
 # -- General configuration ---------------------------------------------------
