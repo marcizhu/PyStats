@@ -30,6 +30,7 @@ jobs:
 
     - uses: actions/upload-artifact@v4
       with:
+        name: build-source-${{ github.sha }}.tar.gz
         path: dist/*.tar.gz
 
   build_wheels:
@@ -59,6 +60,7 @@ jobs:
     - name: Upload wheels
       uses: actions/upload-artifact@v4
       with:
+        name: build-${{ matrix.os }}-${{ github.sha }}
         path: wheelhouse/*.whl
 
   upload_all:
@@ -72,8 +74,7 @@ jobs:
 
     - uses: actions/download-artifact@v4
       with:
-        name: artifact
-        path: dist
+        path: dist/
 
     - uses: pypa/gh-action-pypi-publish@v1.10.2
       with:
