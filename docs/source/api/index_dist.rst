@@ -1,4 +1,4 @@
-.. Copyright (c) 2021 Marc Izquierdo
+.. Copyright (c) 2021-2024 Marc Izquierdo
 
    Distributed under the terms of the MIT License.
 
@@ -46,7 +46,7 @@ Distributions
 
 .. toctree::
    :maxdepth: 2
-   
+
    Beta
 
 +----------------------------------------+--------------------------------------------------------------+

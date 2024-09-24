@@ -1,4 +1,4 @@
-.. Copyright (c) 2021 Marc Izquierdo
+.. Copyright (c) 2021-2024 Marc Izquierdo
 
    Distributed under the terms of the MIT License.
 
@@ -74,7 +74,7 @@ The quantile function of the Logistic distribution:
 
 .. math::
 
-   q(p; \mu, \sigma) = \mu + \sigma \times \ln \left( \frac{p}{1-p} \right) 
+   q(p; \mu, \sigma) = \mu + \sigma \times \ln \left( \frac{p}{1-p} \right)
 
 Methods for scalar input, as well as for list input, are listed below.
 

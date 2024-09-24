@@ -18,7 +18,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'PyStats'
-copyright = '2021, Marc Izquierdo'
+copyright = '2021-2024, Marc Izquierdo'
 author = 'Marc Izquierdo'
 
 # The full version, including alpha/beta/rc tags

@@ -133,6 +133,6 @@ This library uses [kthohr/stats](https://github.com/kthohr/stats) for the statis
 
 
 ## License
-Copyright (c) Marc Izquierdo 2021  
+Copyright (c) Marc Izquierdo 2021-2024  
 This library is licensed under the [MIT License](https://choosealicense.com/licenses/mit/). See
 [LICENSE](https://github.com/marcizhu/pystats/blob/master/LICENSE) for more details.
