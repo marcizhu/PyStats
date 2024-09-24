@@ -18,7 +18,7 @@ jobs:
     name: Build source distribution
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
       with:
         submodules: true
 
@@ -28,7 +28,7 @@ jobs:
     - name: Check metadata
       run: pipx run twine check dist/*
 
-    - uses: actions/upload-artifact@v2
+    - uses: actions/upload-artifact@v4
       with:
         path: dist/*.tar.gz
 
@@ -38,14 +38,17 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]
+        os:
+        - ubuntu-latest
+        - windows-latest
+        - macos-13
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
       with:
         submodules: true
 
-    - uses: joerick/cibuildwheel@v1.10.0
+    - uses: pypa/cibuildwheel@v2.21.1
       env:
         CIBW_BUILD: cp3*-* pp3*-*
 
@@ -54,7 +57,7 @@ jobs:
       shell: bash
 
     - name: Upload wheels
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         path: wheelhouse/*.whl
 
@@ -65,14 +68,15 @@ jobs:
     if: github.event_name == 'release' && github.event.action == 'published'
 
     steps:
-    - uses: actions/setup-python@v2
+    - uses: actions/setup-python@v5
 
-    - uses: actions/download-artifact@v2
+    - uses: actions/download-artifact@v4
       with:
         name: artifact
         path: dist
 
-    - uses: pypa/gh-action-pypi-publish@v1.4.2
+    - uses: pypa/gh-action-pypi-publish@v1.10.2
       with:
+        packages-dir: dist/*
         user: __token__
         password: ${{ secrets.PYPI_TOKEN }}
