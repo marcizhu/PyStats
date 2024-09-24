@@ -102,7 +102,7 @@ with open("README.md", "r", encoding="utf-8") as readme:
 
 setup(
     name="PyStats",
-    version="0.1",
+    version="0.1.1",
     author="Marc Izquierdo",
     author_email="marcizhu@gmail.com",
     description="A Python 3 package of statistical analysis and distributions",
