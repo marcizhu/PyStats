@@ -36,5 +36,13 @@ pybind11_add_module(pystats
 	src/Uniform.cpp
 	src/Weibull.cpp)
 
+find_package(OpenMP)
+if(OpenMP_CXX_FOUND AND CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang|AppleClang")
+	message(STATUS "OpenMP: Enabled")
+	target_link_libraries(pystats PUBLIC OpenMP::OpenMP_CXX)
+else()
+	message(AUTHOR_WARNING "OpenMP: DISABLED")
+endif()
+
 target_link_libraries(pystats PRIVATE gcem stats)
 target_include_directories(pystats PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
